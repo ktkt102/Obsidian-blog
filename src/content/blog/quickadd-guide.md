@@ -1,7 +1,8 @@
 ---
-title: 'QuickAddプラグインで実現する超速インプット術'
-description: 'Obsidianへの情報入力をもっと速く、もっとスマートに。QuickAddプラグインを使えば、アイデアの瞬時な記録、Webクリッピング、定型情報の素早い追加など、あなたのインプットプロセスを劇的に高速化できます。'
+title: 'QuickAddプラグインでObsidianのワークフローを爆速化する'
+description: 'Obsidianの操作を劇的に効率化する「QuickAdd」プラグイン。コマンドパレットから一発でノート作成、テンプレート適用、タスク追加など、あらゆるアクションを実行する方法を解説します。'
 pubDate: '2025-07-15'
+slug: 'quickadd-guide'
 
 ---
 

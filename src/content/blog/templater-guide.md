@@ -2,6 +2,7 @@
 title: '【決定版】Obsidian Templaterプラグイン入門：面倒なノート作成を完全自動化'
 description: 'Obsidianの必須プラグイン「Templater」の基本的な使い方から、動的なコマンドを使った高度なテクニックまで解説。日々の議事録、読書メモ、デイリーノート作成を自動化し、あなたの知的生産を加速させます。'
 pubDate: '2025-07-13'
+slug: 'templater-guide'
 
 ---
 
