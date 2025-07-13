@@ -1,0 +1,63 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<!doctype html>
+<html lang="ja">
+	<head>
+		<BaseHead title="記事一覧" description="すべての記事一覧" />
+		<style>
+			main {
+				width: 960px;
+				max-width: calc(100% - 2em);
+				color: rgb(var(--gray-dark));
+			}
+			ul {
+				display: grid;
+				grid-template-columns: 1fr;
+				gap: 2em;
+			}
+			.title {
+				margin: 0;
+			}
+			.date {
+				color: rgb(var(--gray));
+			}
+			.read-more {
+				margin-top: 0.5em;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section>
+				<ul>
+					{
+						posts.map((post) => (
+							<li>
+								<a href={`/blog/${post.slug}/`}>
+									<h4 class="title">{post.data.title}</h4>
+								</a>
+								<FormattedDate date={post.data.pubDate} class="date" />
+								<p>{post.data.description}</p>
+								<a href={`/blog/${post.slug}/`} class="read-more">
+																		Read more
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>

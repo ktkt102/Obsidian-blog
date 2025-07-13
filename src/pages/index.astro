@@ -1,0 +1,27 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Obsidian自動化ブログへようこそ！</h1>
+			<p>
+				このブログでは、Obsidianを使った知的生産の「自動化」と「効率化」に特化した情報を発信していきます。
+			</p>
+			<p>
+				Templater, Dataview, QuickAddなどの強力なプラグインを組み合わせ、あなたのObsidianを最強のナレッジベースへと進化させるお手伝いをします。
+			</p>
+			<p>最新の記事は<a href="/blog">記事一覧</a>からご覧いただけます。</p>
+		</main>
+		<Footer />
+	</body>
+</html>
