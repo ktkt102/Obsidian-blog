@@ -7,4 +7,5 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
 	site: 'https://joyful-panda-4b9849.netlify.app',
 	integrations: [mdx(), sitemap()],
+	trailingSlash: 'always',
 });
